@@ -32,9 +32,11 @@ class SearchesController < ApplicationController
 
   def getListOf(json, key)
     values = []
-    json.each {
-      |x| values.push(x[key])
-    }
+    if json != nil
+      json.each {
+        |x| values.push(x[key])
+      }
+    end
     return values
   end
 
