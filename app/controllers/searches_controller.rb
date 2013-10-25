@@ -2,7 +2,8 @@ require 'rubygems'
 require 'json'
 
 class SearchesController < ApplicationController
-  before_action :set_search, only: [:show, :edit, :update, :destroy]
+  #before_action :set_search, only: [:show, :edit, :update, :destroy]
+  before_action :set_search, only: [:edit, :update]
 
   # GET /searches
   # GET /searches.json

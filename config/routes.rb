@@ -1,6 +1,7 @@
 IssueFinder::Application.routes.draw do
   resources :searches
   root 'searches#edit'
+  match '*path' => redirect('/'), via: :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
