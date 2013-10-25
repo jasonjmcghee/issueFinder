@@ -1,4 +1,4 @@
 Issue Finder
 ============
 
-(http://issue-finder.herokuapp.com/)[Find a bug!]
+[Find a bug!](http://issue-finder.herokuapp.com/)
