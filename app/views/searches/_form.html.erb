@@ -10,13 +10,26 @@
       </ul>
     </div>
   <% end %>
+  <script>
+    var vals = [$('.field input')[0].value, $('.field input')[1].value];
+    function clearVal (dom) {
+      vals = [$('.field input')[0].value, $('.field input')[1].value];
+      dom.value = '';
+    }
+    
+    function restoreVal(num) {
+      if ($('.field input')[num].value == '') {
+        $('.field input')[num].value = vals[num];
+      }
+    }
+  </script>
   <div class="field">
     <%= f.label :keyword %><br>
-    <%= f.text_field :keyword, :onclick => "$('.field input')[0].value = ''" %>
+    <%= f.text_field :keyword, :onclick => "clearVal($('.field input')[0])", :onblur => "restoreVal(0)" %>
   </div> <br>
   <div class="field">
     <%= f.label :language %><br>
-    <%= f.text_field :language, :onclick => "$('.field input')[1].value = ''" %>
+    <%= f.text_field :language, :onclick => "clearVal($('.field input')[1])", :onblur => "restoreVal(1)" %>
   </div> <br>
   <div class="field">
     <%= f.label :order %><br>
