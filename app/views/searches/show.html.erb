@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<ul>
+  <% @issues.each do |issue| %>
+    <li>Bug: <%= link_to issue[1], issue[2] %> in <%= issue[0] %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_search_path(@search) %> |
+<%= link_to 'Back', searches_path %>

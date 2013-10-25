@@ -1,0 +1,14 @@
+<h1>Issue Search</h1>
+
+<%= render 'form' %>
+<br />
+<div class="issues">Bugs
+  <ul>
+    <% @issues.each do |issue| %>
+      <li><%= link_to issue[1], issue[2] %> in <%= issue[0] %></li>
+    <% end %>
+  </ul>
+</div>
+
+<!--<#%= link_to 'Show', @search %> |
+  <#%= link_to 'Back', searches_path %>-->
