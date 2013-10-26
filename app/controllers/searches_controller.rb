@@ -2,7 +2,8 @@ require 'rubygems'
 require 'json'
 
 class SearchesController < ApplicationController
-  before_action :set_search, only: [:show, :edit, :update, :destroy]
+  #before_action :set_search, only: [:show, :edit, :update, :destroy]
+  before_action :set_search, only: [:edit, :update]
 
   # GET /searches
   # GET /searches.json
@@ -32,9 +33,11 @@ class SearchesController < ApplicationController
 
   def getListOf(json, key)
     values = []
-    json.each {
-      |x| values.push(x[key])
-    }
+    if json != nil
+      json.each {
+        |x| values.push(x[key])
+      }
+    end
     return values
   end
 
@@ -42,6 +45,7 @@ class SearchesController < ApplicationController
     url = "\"https://api.github.com/search/issues?q=" + topic + "+label:bug+language:" + lang + "+state:open&sort=" + order + "&order=desc\" -H 'Accept: application/vnd.github.preview'"
     data = `curl -i #{url} 2> /dev/null`
     j = data.index("{")
+    if j == nil or j == -1 then return [] end
     raw = data[j..data.length-1]
     items = JSON.parse(raw)["items"]
     titles = getListOf(items, "title")
