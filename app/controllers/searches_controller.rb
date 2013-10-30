@@ -27,8 +27,8 @@ class SearchesController < ApplicationController
   # GET /searches/1/edit
   def edit
     #search = Search.find(params[:id])
-    search = Search.first
-    @issues = getGitIssues(search.keyword, search.language, search.order)
+    @search = Search.first
+    @issues = getGitIssues(@search.keyword, @search.language, @search.order)
   end
 
   def getListOf(json, key)
@@ -60,6 +60,10 @@ class SearchesController < ApplicationController
       i = userAndName.index("/")
       repoName = userAndName[i+1..repo.length-1]
       j = urls.index(x)
+      length = titles[j].length + repoName.length + 4
+      if length > 82
+        titles[j] = titles[j][0..(titles[j].length-(length - 82))] + '...'
+      end
       issues.push([repoName, titles[j], html_urls[j]])
     }
     return issues

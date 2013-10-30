@@ -23,12 +23,10 @@ table {
 
 form {
   margin-top: 20px;
-  //text-align: center;
 }
 
 .field {
 
-  //text-align: center;
   display: inline-block;
   input {
     background: none;
@@ -41,7 +39,7 @@ form {
     background-color: #ddd;
     font-style: italic;
   }
-  margin-top:10px;
+  margin-top:30px;
 }
 
 .issues {
@@ -52,6 +50,11 @@ form {
 ul {
   margin-left: auto;
   margin-right: auto;
+  font: 120% $font-stack;
+  .list_of_issues {
+        text-align: left;
+        margin-top: 20px;
+  }
 }
 
 li {
@@ -61,5 +64,46 @@ li {
   font: 100% $font-stack;
   font-size: 20px;
   padding: 5px;
+  a {
+    &:hover {
+      color: #a55;
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1, body {
+    text-align: left;
+  }
+
+  .field {
+    text-align: center;
+  } 
+
+  .sidebar {
+    position: fixed;
+    height: 100%;
+    width: 475px;
+    text-align: center;
+    overflow-y: scroll;
+  }
+
+  .issues {
+    ul {
+      margin: 0 auto;
+      padding-top: 20px;
+      text-align: center;
+      font: 120% $font-stack;
+      .list_of_issues {
+        text-align: left;
+        margin-top: 20px;
+      }
+    }
+    position: fixed;
+    overflow-y: scroll;
+    height: 100%;
+    margin-left: 500px;
+  }
 }
 

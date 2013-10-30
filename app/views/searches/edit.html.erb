@@ -1,12 +1,16 @@
-<h1>Issue Search</h1>
 
-<%= render 'form' %>
-<br />
-<div class="issues">Bugs
-  <ul>
-    <% @issues.each do |issue| %>
-      <li><%= link_to issue[1], issue[2] %> in <%= issue[0] %></li>
-    <% end %>
+<div class="sidebar">
+<h1>Issue Search</h1>
+  <%= render 'form' %>
+  </div>
+<div class="issues">
+  <ul>Open Issues
+    <div class="list_of_issues">
+      <% @issues.each do |issue| %>
+        <li><%= link_to issue[1], issue[2] %> in <%= issue[0] %></li>
+      <% end %>
+      <li></li>
+    </div>
   </ul>
 </div>
 
