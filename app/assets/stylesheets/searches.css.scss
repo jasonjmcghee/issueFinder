@@ -73,8 +73,8 @@ li {
 }
 
 @media screen and (min-width: 1024px) {
-  h1, body {
-    text-align: left;
+  h1 {
+    text-align: center;
   }
 
   .field {
@@ -84,7 +84,7 @@ li {
   .sidebar {
     position: fixed;
     height: 100%;
-    width: 475px;
+    width: 490px;
     text-align: center;
     overflow-y: scroll;
   }
