@@ -72,12 +72,18 @@ li {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   body {
     margin: 0
   }
+
   h1 {
     text-align: center;
+  }
+
+  .floater {
+    float:right;
+    width: 1355px;
   }
 
   .field {
@@ -90,7 +96,6 @@ li {
     height: 100%;
     width: 490px;
     text-align: center;
-    overflow-y: scroll;
   }
 
   .issues {
@@ -109,5 +114,13 @@ li {
     height: 100%;
     margin-left: 500px;
   }
+
+  @media screen and (max-height: 600px) {
+    .sidebar {
+      overflow-y: scroll;
+    }
+  }
 }
+
+
 
