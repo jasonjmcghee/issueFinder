@@ -33,7 +33,7 @@
   </div> <br>
   <div class="field">
     <%= f.label :order %><br>
-    <%= f.select :order, options_for_select([['created', 'created'], ['comments', 'comments'], ['updated', 'updated']]) %>
+    <%= f.select :order, options_for_select([['updated', 'updated'], ['created', 'created'], ['comments', 'comments']]) %>
   </div> <br>
   <div class="actions">
     <%= f.submit "Find Issues" %>
