@@ -35,12 +35,23 @@ form {
     font: 100% $font-stack;
     font-size: 40px;
     text-align:center;
-    background-color: #7f9;
     font-style: italic;
-    border:2px solid;
+    background-color: #7f9;
+    border:2px solid #333;
     border-radius:10px;
     margin-top: 5px;
     box-shadow: 5px 8px 5px #397;
+  }
+  select {
+    background: #3a8;
+    width: 120px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 2px solid #333;
+    border-radius: 5px;
+    height: 34px;
+    -webkit-appearance: none;
   }
   margin-top:30px;
 }
@@ -69,11 +80,19 @@ li {
   padding: 5px;
   a {
     &:hover {
-      color: #a55;
       background-color: rgba(255, 255, 255, 0);
     }
+    text-decoration: none;
   }
 }
+
+  .actions input {
+    padding: 10px 15px 11px;
+    font-size: 20px;
+    background-color: #7f9;
+    text-shadow: 1px 1px #57D6C7;
+    border-radius: 5px;
+  }
 
 @media screen and (min-width: 1280px) {
   body {
@@ -84,6 +103,8 @@ li {
   h1 {
     text-align: center;
   }
+
+  
 
   .floater {
     float:right;
@@ -104,12 +125,18 @@ li {
   }
 
   .issues {
+
     ul {
-      margin: 0 auto;
+
+      margin-top: -10px;
       padding-top: 20px;
       text-align: center;
-      font: 120% $font-stack;
+      font: 120% 'Pacifico', cursive;
       .list_of_issues {
+        padding-top: 5px;
+        background-color: #7f9;
+        border:2px solid #333;
+        border-radius:10px;
         text-align: left;
         label li {
           margin: 3px;
@@ -120,12 +147,9 @@ li {
             background: #3a8;
           }
           a {
-            text-decoration: none;
-            &:hover {
-              color: black;
-            }
           }
         }
+        padding-bottom: 2px;
       }
     }
     position: fixed;
