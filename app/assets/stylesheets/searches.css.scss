@@ -81,6 +81,7 @@ li {
   font-size: 20px;
   padding: 5px;
   a {
+    display: block;
     &:hover {
       background-color: rgba(255, 255, 255, 0);
     }
@@ -125,10 +126,12 @@ li {
     text-align: center;
   }
 
+  
+
+
+
   .issues {
-
     ul {
-
       margin-top: -10px;
       padding-top: 20px;
       text-align: center;
@@ -138,15 +141,33 @@ li {
         border:2px solid #333;
         border-radius:10px;
         text-align: left;
-        label li {
-          margin: 3px;
-          padding-left: 5px;
-          padding-right: 5px;
-          border-radius:5px;
-          &:hover {
-            background: #3a8;
-          }
+        li {
+          .right-arrow {
+              width: 0; 
+              height: 0; 
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+              border-left: 10px solid green;
+              border-left-color: rgba(0, 0, 0, 0);
+              display: block;
+              position: fixed;
+              margin-left: -24px;
+              margin-top: 7px;
+            }
+            &:hover {
+              .right-arrow {
+                border-left-color: #000;
+              }
+            }
           a {
+            padding-top: 8px;
+            padding-bottom: 6px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius:5px;
+            &:hover {
+              background: #3a8;
+            }
           }
         }
         padding-bottom: 2px;
