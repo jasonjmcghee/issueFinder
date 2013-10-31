@@ -9,6 +9,7 @@ body {
   font: 100% $font-stack;
   font-size: 40px;
   text-align: center;
+    background: #3ca;
 }
 
 h1 {
@@ -98,7 +99,6 @@ li {
 @media screen and (min-width: 1310px) {
   body {
     margin: 0;
-    background: #3ca;
   }
 
   h1 {
