@@ -32,7 +32,7 @@
     <%= f.text_field :language, :onclick => "clearVal($('.field input')[1])", :onblur => "restoreVal(1)" %>
   </div> <br>
   <div class="field">
-    <%= f.label :order %><br>
+    <%= f.label :order %>: 
     <%= f.select :order, options_for_select([['updated', 'updated'], ['created', 'created'], ['comments', 'comments']]) %>
   </div> <br>
   <div class="actions">

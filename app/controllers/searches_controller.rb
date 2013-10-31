@@ -61,8 +61,8 @@ class SearchesController < ApplicationController
       repoName = userAndName[i+1..repo.length-1]
       j = urls.index(x)
       length = titles[j].length + repoName.length + 4
-      if length > 82
-        titles[j] = titles[j][0..(titles[j].length-(length - 82))] + '...'
+      if length > 81
+        titles[j] = titles[j][0..(titles[j].length-(length - 81))] + '...'
       end
       issues.push([repoName, titles[j], html_urls[j]])
     }
