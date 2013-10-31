@@ -90,10 +90,6 @@ li {
     width: 1355px;
   }
 
-  .actions {
-    width: 100px;
-  }
-
   .field {
     text-align: center;
 
@@ -125,6 +121,9 @@ li {
           }
           a {
             text-decoration: none;
+            &:hover {
+              color: black;
+            }
           }
         }
       }
