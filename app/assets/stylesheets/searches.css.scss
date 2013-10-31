@@ -14,7 +14,7 @@ body {
 h1 {
   margin: 0 auto;
   text-align: center;
-  font: 200% $font-stack
+  font: 220% 'Pacifico', cursive;
 }
 
 table {
@@ -31,13 +31,16 @@ form {
   input {
     background: none;
     outline: none;
-    border: none;
     font-weight: 300;
     font: 100% $font-stack;
     font-size: 40px;
     text-align:center;
-    background-color: #ddd;
+    background-color: #eee;
     font-style: italic;
+    border:2px solid;
+    border-radius:10px;
+    margin-top: 5px;
+    box-shadow: 5px 8px 5px #888888;
   }
   margin-top:30px;
 }
@@ -88,6 +91,7 @@ li {
 
   .field {
     text-align: center;
+
   } 
 
   .sidebar {
@@ -99,6 +103,7 @@ li {
   }
 
   .issues {
+    margin-top: 20px;
     ul {
       margin: 0 auto;
       padding-top: 20px;
@@ -106,7 +111,6 @@ li {
       font: 120% $font-stack;
       .list_of_issues {
         text-align: left;
-        margin-top: 20px;
       }
     }
     position: fixed;
