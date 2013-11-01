@@ -9,10 +9,10 @@
     <ul>Open Issues
       <div class="list_of_issues">
         <% @issues.each do |issue| %>
-          <% @link_text = issue[1] + ' in ' + issue[0] %>
+          <% @link_text = issue[1] + ' <strong> - ' + issue[0] + '</strong>' %>
           <li>
             <div class = "right-arrow"></div>
-            <%= link_to @link_text, issue[2] %>
+            <a href=<%=issue[2]%>><%= raw @link_text %></a>
           </li>
         <% end %>
       </div>
